@@ -41,7 +41,9 @@ public class MemberDaoH2Impl implements MemberInterface {
 		String sqlString = String.format("select * from member where id=%d", id);
 		ret.put("sql", sqlString);
 		try {
-			MemberVO member = jdbcTemplate.queryForObject(sqlString, new BeanPropertyRowMapper<MemberVO>(MemberVO.class));
+//			MemberVO member = jdbcTemplate.queryForObject(sqlString, new BeanPropertyRowMapper<MemberVO>(MemberVO.class));
+			MemberVO member = jdbcTemplate.queryForObject("select * from member where id=?", 
+					new BeanPropertyRowMapper<MemberVO>(MemberVO.class),id);
 			ret.put("data", member);
 		} catch (Exception e) {
 			ret.put("data", null);
