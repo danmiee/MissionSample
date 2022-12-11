@@ -36,3 +36,7 @@ Mission 51.
   
 Mission 52.
   1. Mission51에서 로그파일을 @Qualifier로 구분하는 버전
+  
+Mission 6.
+  Mission5에서 Spring jdbc 를 Spring Data JPA로 변경한 버전
+  Logging 구조를 SQL문을 저장하지 않고 메서드를 저장하는 방식으로 변경
